@@ -1,6 +1,13 @@
 ﻿using System.Collections.Generic;
+#if (WPF || WINDOWS_PHONE || SILVERLIGHT)
+using System.Windows;
+using System.Windows.Media;
+#endif
+#if UNIVERSAL
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
+#endif
+
 
 namespace LinqToXaml
 {

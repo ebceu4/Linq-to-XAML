@@ -52,7 +52,9 @@
     <None Include="NuGetPackage.ps1" />
     <None Include="NuGetSetup.ps1" />
     <None Include="NuGet.exe" />
-    <None Include="NuGet.config" />
+    <None Include="NuGet.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Package.nuspec">
       <SubType>Designer</SubType>
     </None>
@@ -63,7 +65,20 @@
     <Folder Include="tools\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\LinqToXaml.dll" />
+    <None Include="lib\portable-netcore451+wpa81\LinqToXaml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\net35\LinqToXaml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\sl5\LinqToXaml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\windowsphone8\LinqToXaml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -175,7 +175,7 @@ $choices = [System.Management.Automation.Host.ChoiceDescription[]](
 	If ($Base64EncodedMessage) {
 		Write-Warning ([System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($Base64EncodedMessage)))
 	}
-
+	 
 	$firstAnswer = $Host.UI.PromptForChoice(("Would you like to try adding an API key for " + $Url + "?"), "", $choices, (1))
 
 	if ($firstAnswer -eq 0) {
